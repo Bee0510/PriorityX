@@ -27,6 +27,9 @@ const HomeScreen = () => {
   const renderTodo = ({ item }) => (
     <View className="flex-row items-center justify-between">
       <TaskItem text={item.text} />
+      <TouchableOpacity onPress={() => handleRemoveTodo()}>
+        <MinusCircleIcon size={20} color={"#F30000"} />
+      </TouchableOpacity>
     </View>
   );
 
