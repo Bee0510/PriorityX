@@ -1,21 +1,3 @@
-// import { Add_Tasks, Remove_Tasks } from "./ActionTypes";
-
-// export const Reducers = (state = initialState, action) => {
-//   switch (action.type) {
-//     case Add_Tasks: {
-//       return { tasks: [...state.tasks, action.payload] };
-//     }
-//     case Remove_Tasks:
-//       return {
-//         ...state,
-//         tasks: state.tasks.filter((todo) => todo.id !== action.payload),
-//       };
-
-//     default: {
-//       return state;
-//     }
-//   }
-// };
 import { ADD_TASK, REMOVE_TASK } from "./ActionTypes";
 const initialState = [
   {

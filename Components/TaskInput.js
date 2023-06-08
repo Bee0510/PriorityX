@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Pressable,
 } from "react-native";
-import React, { useState } from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
 import { ArrowSmallRightIcon, PlusIcon } from "react-native-heroicons/solid";
 import { addTASK, addTask } from "../Redux/actions";
@@ -28,18 +28,19 @@ const TaskInput = () => {
   };
 
   return (
-    <View className="flex-row items-center justify-between">
-      <View className="flex-row items-center space-x-3">
-        <PlusIcon size={20} color={"#98A2B3"} />
+    <View className="flex-row items-center justify-between mb-3 mt-4">
+      <View className="flex-row items-center space-x-3 ">
+        <PlusIcon size={24} color={"#98A2B3"} />
         <TextInput
+          className="w-64 overflow-clip"
           placeholder="     Add Task"
           onChangeText={(text) => setTodoText(text)}
           value={todoText}
         />
       </View>
-      <TouchableOpacity className="h-8 w-8 bg-[#7F56D9] items-center justify-center rounded-sm">
+      <TouchableOpacity className="h-8 w-8 bg-[#1D2939] items-center justify-center rounded-full">
         <Pressable onPress={handleAddTodo}>
-          <ArrowSmallRightIcon size={20} color={"#1D2939"} />
+          <ArrowSmallRightIcon size={20} color={"white"} />
         </Pressable>
       </TouchableOpacity>
     </View>
